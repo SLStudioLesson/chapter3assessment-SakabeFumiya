@@ -1,7 +1,6 @@
 package com.recipeapp.datahandler;
 
 import com.recipeapp.model.Recipe;
-import java.io.*;
 import java.util.ArrayList;
 
 public class JSONDataHandler implements DataHandler{
@@ -20,7 +19,7 @@ public class JSONDataHandler implements DataHandler{
     }
 
     @Override
-    public ArrayList<Recipe> searchData(){
+    public ArrayList<Recipe> searchData(String keyWord){
         return null;
     }
 }

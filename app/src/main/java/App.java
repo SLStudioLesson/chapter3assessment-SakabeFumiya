@@ -15,16 +15,30 @@ public class App {
             System.out.print("Select (1/2): ");
             String choice = reader.readLine();
 
+            DataHandler dataHandler;
+            
             if(choice.equals("1")){
                 //「1」を選択した場合、CSVDataHandlerインスタンスを生成する
-                DataHandler dataHandler = new CSVDataHandler();
+                dataHandler = new CSVDataHandler();
             } else if(choice.equals("2")){
                 //「2」を選択した場合、JSONDataHandlerインスタンスを生成する
-                DataHandler dataHandler = new JSONDataHandler();
+                dataHandler = new JSONDataHandler();
             }else{
                 // 不正な入力（「1」「2」以外）が与えられた場合、CSVDataHandlerインスタンスを生成する
-                DataHandler dataHandler = new CSVDataHandler();
+                dataHandler = new CSVDataHandler();
             }
+
+            /*switch (choice) {
+                case "1":
+                    dataHandler = new CSVDataHandler();
+                    break;
+                case "2":
+                    dataHandler = new JSONDataHandler();
+                    break;
+                default:
+                    dataHandler = new CSVDataHandler();
+                    break;
+            }*/
 
             // 選択されたデータハンドラーをcom/recipeappパッケージのRecipeUIに渡し、
             RecipeUI recipeUI = new RecipeUI(dataHandler);

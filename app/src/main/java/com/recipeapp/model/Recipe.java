@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Recipe {
     private String name;
-    private ArrayList<Ingredients> ingredients;
+    private ArrayList<Ingredient> ingredients;
 
     public Recipe(String name, ArrayList<Ingredient> ingredients){
         this.name = name;
